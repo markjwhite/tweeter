@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bungee";
+  color: #4056A1;
+  margin-top: 120px;
+  background-color: rgba(240, 240, 203, 0.975);
+background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+
+header > div > h2 {
+  margin-top: 0px;
+}

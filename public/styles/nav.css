@@ -1,0 +1,33 @@
+nav {
+  display: flex;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  justify-content: space-between;
+  color: #FFFFFF;
+  align-items: center;
+  padding: 1.5em;
+  position: fixed; /* stay in place */
+  z-index: 1; /* sit on top */
+  left: 0;
+  top: 0;
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+nav > span{
+  font-size: 2em;
+  font-family: 'Bungee', sans-serif;
+}
+
+.writeTweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  padding: 1.5em;
+}
+
+.arrow {
+  color: red;
+}
