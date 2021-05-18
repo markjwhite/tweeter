@@ -1,4 +1,4 @@
-header {
+.mainheader {
   display: flex;
   height: 400px;
   flex-direction: column;
@@ -11,6 +11,6 @@ header {
 background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
-header > div > h2 {
+.mainheader > div > h2 {
   margin-top: 0px;
 }
