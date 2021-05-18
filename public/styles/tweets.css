@@ -29,6 +29,7 @@ article footer {
 article .icons {
   display:flex;
   color: #4056A1;
+  font-size: 0.6em;
 }
 
 article .flag:hover, .retweet:hover, .like:hover {
@@ -47,4 +48,8 @@ article .retweet {
 
 article .like {
   padding-left: 6px;
+}
+
+article .time-keeper {
+  font-size: 0.6em;
 }
