@@ -1,3 +1,7 @@
+#tweets-container {
+  width: inherit;
+}
+
 article {
   display: flex;
   margin-top: 1.2em;
@@ -13,7 +17,7 @@ article header {
   padding: 16px;
 }
 
-article .tag {
+.handle {
   color: skyblue;
   font-weight: bold;
 }
@@ -26,30 +30,30 @@ article footer {
   border-top: inherit;
 }
 
-article .icons {
+.icons {
   display:flex;
   color: #4056A1;
   font-size: 0.6em;
 }
 
-article .flag:hover, .retweet:hover, .like:hover {
+.flag:hover, .retweet:hover, .like:hover {
 color: gold;
 }
 
-article .flag {
+.flag {
   padding-right: 6px;
 }
 
-article .retweet {
+.retweet {
   padding-left: 6px;
   padding-right: 6px;
 }
 
 
-article .like {
+.like {
   padding-left: 6px;
 }
 
-article .time-keeper {
+.time-keeper {
   font-size: 0.6em;
 }
