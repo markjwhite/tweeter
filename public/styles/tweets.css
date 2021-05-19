@@ -21,6 +21,10 @@ article header {
   color: skyblue;
   font-weight: bold;
 }
+.text {
+
+  flex-wrap: wrap;
+}
 
 article footer {
   display:flex;
@@ -29,6 +33,7 @@ article footer {
   margin-bottom: 12px;
   border-top: inherit;
 }
+
 
 .icons {
   display:flex;

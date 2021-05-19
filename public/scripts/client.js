@@ -49,11 +49,12 @@ $(document).ready(() => {
     event.preventDefault();
     //over char limit
     if (event.target[0].value.length > 140) {
-      window.alert("Tweet cannot be greater than 140 characters!")
+      $(".error").append("Error: Tweet cannot be greater than 140 characters!").slideDown();
       //empty text area
     } else if (event.target[0].value.length === 0) {
-      window.alert("Tweet is EMPTY!")
+      $(".error").append("Error: Text-field is EMPTY!").slideDown();
     } else {
+      $(".error").append().slideUp();
       $.ajax({
         method: "POST",
         url: "/tweets",
