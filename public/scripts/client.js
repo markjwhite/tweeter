@@ -49,10 +49,10 @@ $(document).ready(() => {
     event.preventDefault();
     //over char limit
     if (event.target[0].value.length > 140) {
-      $(".error").append("Error: Tweet cannot be greater than 140 characters!").slideDown();
+      $(".error").text("Error: Tweet cannot be greater than 140 characters!").slideDown();
       //empty text area
     } else if (event.target[0].value.length === 0) {
-      $(".error").append("Error: Text-field is EMPTY!").slideDown();
+      $(".error").text("Error: Text-field is EMPTY!").slideDown();
     } else {
       $(".error").append().slideUp();
       $.ajax({
