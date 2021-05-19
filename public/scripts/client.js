@@ -44,14 +44,14 @@ $(document).ready(() => {
   };
 
 
-  //---(POST) submits form data, calls loadTweet, and resets textbox/counter---//
+  //---(POST) Creates event listener, submits form data, calls loadTweet, and resets textbox/counter---//
   $(".addTweet").on("submit", function(event) {
     event.preventDefault();
     //over char limit
     if (event.target[0].value.length > 140) {
       $(".error").text("Error: Tweet cannot be greater than 140 characters!").slideDown();
       //empty text area
-    } else if (event.target[0].value.length === 0) {
+    } else if (event.target[0].value.trim().length === 0) {
       $(".error").text("Error: Text-field is EMPTY!").slideDown();
     } else {
       $(".error").append().slideUp();
