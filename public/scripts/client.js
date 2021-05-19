@@ -35,6 +35,7 @@ $(document).ready(() => {
     return $tweet;
   };
 
+  //---Renders each tweet in order of creation---///
   const renderTweets = (data) => {
     $("#tweets-container").empty();
     for (const tweet of data) {
@@ -43,23 +44,30 @@ $(document).ready(() => {
   };
 
 
-  //post request new tweet
+  //---(POST) submits form data, calls loadTweet, and resets textbox/counter---//
   $(".addTweet").on("submit", function(event) {
     event.preventDefault();
-    $.ajax({
-      method: "POST",
-      url: "/tweets",
-      data: $(this).serialize()
-    }).then((response) => {
-      loadTweets()
-      $("#tweet-text").val('');
-      $(".counter").val('140');
+    if (event.target[0].value.length > 140) {
+      window.alert("Tweet cannot be greater than 140 characters!")
+    } else if (event.target[0].value.length === 0) {
+      window.alert("Tweet is EMPTY!")
+    } else {
+      $.ajax({
+        method: "POST",
+        url: "/tweets",
+        data: $(this).serialize()
+      }).then((response) => {
+        loadTweets()
+        $("#tweet-text").val('');
+        $(".counter").val('140');
 
-    }).catch((error) => {
-      console.log("There was an error:", error);
-    })
+      }).catch((error) => {
+        console.log("There was an error:", error);
+      })
+    }
   })
 
+  //---(GET) gets DATA from JSON and performs Asynch render on DATA response---//
   const loadTweets = () => {
     $.ajax({
       method: "GET",
@@ -72,7 +80,6 @@ $(document).ready(() => {
     })
   }
 
-
-  loadTweets();
+  loadTweets()
 })
 
