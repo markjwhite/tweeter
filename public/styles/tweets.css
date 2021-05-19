@@ -1,4 +1,7 @@
 #tweets-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: inherit;
 }
 
@@ -21,9 +24,9 @@ article header {
   color: skyblue;
   font-weight: bold;
 }
-.text {
 
-  flex-wrap: wrap;
+.text {
+  word-wrap: break-word;
 }
 
 article footer {
