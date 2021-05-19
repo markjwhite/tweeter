@@ -14,7 +14,7 @@
   font-family: sans-serif;
 }
 
-.tweetTop > textarea {
+.tweetTop  textarea {
   height: 40px;
   border: none;
   font-size: 1.3rem;
@@ -31,9 +31,13 @@
   font-family: "Bungee";
 }
 
-.tweetBottom > button {
+.tweetBottom  button {
   border: 0;
   margin-top: 5px;
   color: #FFFFFF;
   background: #4056A1;
+}
+
+#error {
+
 }

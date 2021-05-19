@@ -21,7 +21,7 @@ $(document).ready(() => {
   </div>
   <span class='handle'>${data.user.handle}</span>
 </header>
-<h5 class="text">${data.content.text}</h5>
+<h5 class="text">${escape(data.content.text)}</h5>
 <footer>
   <span class="time-keeper">${newTime(data.created_at)}</span>
   <div class="icons">
@@ -47,8 +47,10 @@ $(document).ready(() => {
   //---(POST) submits form data, calls loadTweet, and resets textbox/counter---//
   $(".addTweet").on("submit", function(event) {
     event.preventDefault();
+    //over char limit
     if (event.target[0].value.length > 140) {
       window.alert("Tweet cannot be greater than 140 characters!")
+      //empty text area
     } else if (event.target[0].value.length === 0) {
       window.alert("Tweet is EMPTY!")
     } else {
@@ -82,4 +84,10 @@ $(document).ready(() => {
 
   loadTweets()
 })
+
+const escape = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
