@@ -15,7 +15,7 @@ Tweeter is a simple, single-page Twitter clone.
   
 ## Features
 * Animated compose tweet toggle button.
-* Tweet submission form that include an abritrary character counter.
+* Tweet submission form that includes character counter with an arbitrary 140 character limit.
 * Reponsive design for desktop and smaller devices.
 * Timeago time-keper that lets users know how long ago each post was created.
 
