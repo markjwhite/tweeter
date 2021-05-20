@@ -38,6 +38,10 @@
   background: #4056A1;
 }
 
+.tweetBottom button:hover {
+  background: rgb(118, 137, 174);
+}
+
 .error {
   display: none;
   border: 1px solid;

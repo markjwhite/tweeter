@@ -14,6 +14,10 @@ article {
   padding: 0.5em;
 }
 
+article:hover {
+  box-shadow: 10px 10px 5px grey;
+}
+
 article header {
   display: flex;
   justify-content: space-between;
