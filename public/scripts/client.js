@@ -7,7 +7,11 @@ $(document).ready(() => {
 
   //---Event Listener for .writeTweet TOGGLE---//
   $('.writeTweet').on('click', function() {
-    $('.newTweet').slideToggle();
+    $('.newTweet').slideToggle("slow", function() {
+      if ($('.writeTweet').is(':visible')) {
+        $('#tweet-text').focus()
+      }
+    });
   });
 
 
