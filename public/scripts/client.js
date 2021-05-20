@@ -9,7 +9,7 @@ $(document).ready(() => {
   //get time from unix code
   const newTime = (unix) => {
     return timeago.format(unix);
-  }
+  };
 
 
   const createTweetElement = (data) => {
@@ -39,7 +39,7 @@ $(document).ready(() => {
   const renderTweets = (data) => {
     $("#tweets-container").empty();
     for (const tweet of data) {
-      $("#tweets-container").prepend(createTweetElement(tweet))
+      $("#tweets-container").prepend(createTweetElement(tweet));
     }
   };
 
@@ -60,15 +60,15 @@ $(document).ready(() => {
         url: "/tweets",
         data: $(this).serialize()
       }).then((response) => {
-        loadTweets()
+        loadTweets();
         $("#tweet-text").val('');
         $(".counter").val('140');
 
       }).catch((error) => {
         console.log("There was an error:", error);
-      })
+      });
     }
-  })
+  });
 
   //---(GET) gets DATA from JSON and performs Asynch render on DATA response---//
   const loadTweets = () => {
@@ -77,14 +77,14 @@ $(document).ready(() => {
       url: "/tweets",
       dataType: "JSON"
     }).then((response) => {
-      renderTweets(response)
+      renderTweets(response);
     }).catch((error) => {
-      console.log("There was an error:", error)
-    })
-  }
+      console.log("There was an error:", error);
+    });
+  };
 
-  loadTweets()
-})
+  loadTweets();
+});
 
 //---Cross-Scripting-Protection---//
 const escape = function(str) {
