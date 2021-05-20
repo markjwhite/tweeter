@@ -16,8 +16,12 @@ Tweeter is a simple, single-page Twitter clone.
 ## Features
 * Animated compose tweet toggle button.
 * Tweet submission form that include an abritrary character counter.
-* Reponsive design for desktop and mobile.
+* Reponsive design for desktop and smaller devices.
+* Timeago time-keper that lets users know how long ago each post was created.
 
+## Screenshots
+!["Screenshot of Tweeter Compose Tweet Box"](https://github.com/markjwhite/tweeter/blob/master/docs/Write-Tweet.png?raw=true)
+!["Screenshot of Tweeter Responsive Design"](https://github.com/markjwhite/tweeter/blob/master/docs/Responsive-Design.png?raw=true)
 
 ## Getting Started
 
