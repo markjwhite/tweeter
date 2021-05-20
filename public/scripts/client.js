@@ -5,6 +5,11 @@
  */
 $(document).ready(() => {
 
+  //---Event Listener for .writeTweet TOGGLE---//
+  $('.writeTweet').on('click', function() {
+    $('.newTweet').slideToggle();
+  });
+
 
   //get time from unix code
   const newTime = (unix) => {
@@ -85,6 +90,7 @@ $(document).ready(() => {
 
   loadTweets();
 });
+
 
 //---Cross-Scripting-Protection---//
 const escape = function(str) {
