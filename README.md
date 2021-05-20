@@ -6,13 +6,13 @@ Tweeter is a simple, single-page Twitter clone.
   * HTML
   * CSS
   * JS
-  * Ajax
-  * Jquery
+  * AJAX
+  * jQuery
 
 * Back End
   * Express
   * NodeJS
-
+  
 ## Features
 * Animated compose tweet toggle button.
 * Tweet submission form that include an abritrary character counter.
